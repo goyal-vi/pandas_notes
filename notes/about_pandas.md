@@ -6,7 +6,7 @@
 6. However, the vast majority of methods produce new objects and leave the input data untouched. 
 7. In general we like to favor immutability where sensible.
 8. dates = pd.date_range('20130101', periods=6)
-__DataFrame.to_numpy() gives a NumPy representation of the underlying data. Note that his can be an expensive operation when your DataFrame has columns with different data types, which comes down to a fundamental difference between pandas and NumPy: NumPy arrays have one dtype for the entire array, while pandas DataFrames have one dtype per column. When you call DataFrame.to_numpy(), pandas will find the NumPy dtype that can hold all of the dtypes in the DataFrame. This may end up being object, which requires casting every value to a Python object.__
-[here][1] For df, our DataFrame of all floating-point values, DataFrame.to_numpy() is fast and doesn’t require copying data.
+9. __DataFrame.to_numpy() gives a NumPy representation of the underlying data. Note that his can be an expensive operation when your DataFrame has columns with different data types, which comes down to a fundamental difference between pandas and NumPy: NumPy arrays have one dtype for the entire array, while pandas DataFrames have one dtype per column. When you call DataFrame.to_numpy(), pandas will find the NumPy dtype that can hold all of the dtypes in the DataFrame. This may end up being object, which requires casting every value to a Python object.__
+10. [here][1] For df, our DataFrame of all floating-point values, DataFrame.to_numpy() is fast and doesn’t require copying data.
 
 [1]: https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
